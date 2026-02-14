@@ -34,7 +34,7 @@
       display:flex; 
       align-items:center; 
       justify-content:space-between; 
-      padding: 5px 0; /* Minimal padding to allow logo to grow */
+      padding: 5px 0; /* Reduced vertical padding to give logo more room */
       border-bottom: 1px solid var(--border); 
       position: relative; 
       background: white; 
@@ -43,12 +43,11 @@
     
     .brand{ display:flex; align-items:center; z-index: 2001;}
     
-    /* Logo size control - Increased significantly */
+    /* Logo size control - Optimized for visibility */
     .nav-logo {
-      height: 150px; /* Increased from 85px to 150px for high visibility */
+      height: 120px; /* Increased for desktop visibility */
       width: auto;
       display: block;
-      border-radius: 4px;
       transition: transform 0.3s ease;
     }
     .nav-logo:hover { transform: scale(1.03); }
@@ -86,7 +85,9 @@
 
     /* MOBILE RESPONSIVENESS */
     @media(max-width:992px){
-      .nav-logo { height: 80px; } /* Larger on mobile as well */
+      .nav-logo { 
+        height: 100px; /* Increased significantly for mobile visibility */
+      } 
       .menu-toggle { display: block; }
       .nav-links {
         display: none;
